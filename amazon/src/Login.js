@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import { useState } from "react";
 import { auth } from "./firebase";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -11,27 +15,29 @@ function Login() {
 
   const signIn = (e) => {
     e.preventDefault();
-    {
-      /*signInWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, email, password)
       .then((auth) => {
-        navigate("/");
+        {
+          /*navigate("/");*/
+        }
+        console.log(auth);
       })
-      .catch((error) => alert(error.message));*/
-    }
+      .catch((error) => alert(error.message));
   };
 
   const register = (e) => {
     e.preventDefault();
 
-    {
-      /*createUserWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((auth) => {
         if (auth) {
-          navigate("/");
+          {
+            /*navigate("/");*/
+          }
+          console.log(auth);
         }
       })
-      .catch((error) => alert(error.message)); */
-    }
+      .catch((error) => alert(error.message));
   };
 
   return (
