@@ -1,7 +1,7 @@
 import React from "react";
 import "./Product.css";
 import Button from "@mui/material/Button";
-import StarBorderRoundedIcon from "@mui/icons-material/StarBorderRounded";
+import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
 import { useStateValue } from "./StateProvider";
 
 function Product({ id, title, image, price, rating }) {
@@ -35,7 +35,7 @@ function Product({ id, title, image, price, rating }) {
           {Array(rating)
             .fill()
             .map((_) => (
-              <StarBorderRoundedIcon />
+              <StarRateRoundedIcon />
             ))}
         </div>
       </div>
