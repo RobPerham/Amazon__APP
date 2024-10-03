@@ -2,54 +2,72 @@ import React from "react";
 import "./Footer.css";
 import { Button } from "@mui/material";
 
+const backToTOP = () => {
+  window.scrollTo(0, 0);
+};
+
 function Footer() {
   return (
     <div className="footer">
-      <div className="footer__menu">
-        <Button>Back to top</Button>
+      <div className="footer__backToTop">
+        <Button onClick={backToTOP}>Back to top</Button>
+      </div>
 
+      <div className="footer__container">
         <div className="footer__menuColumn">
           <h3>Get to Know Us</h3>
-          <p>Careers</p>
-          <p>Blog</p>
-          <p>About Amazon</p>
-          <p>Investor Relations</p>
-          <p>Amazon Devices</p>
+          <ol>
+            <ul>Careers</ul>
+            <ul>Blog</ul>
+            <ul>About Amazon</ul>
+            <ul>Investor Relations</ul>
+            <ul>Amazon Devices</ul>
+            <ul>Amazon Tours</ul>
+          </ol>
         </div>
 
         <div className="footer__menuColumn">
           <h3>Make Money with Us</h3>
-          <p>Sell products on Amazon</p>
-          <p>Sell apps on Amazon</p>
-          <p>Become an Affiliate</p>
-          <p>Advertise Your Products</p>
-          <p>Self-Publish with Us</p>
-          <p>Host an Amazon Hub</p>
+          <ol>
+            <ul>Sell products on Amazon</ul>
+            <ul>Sell apps on Amazon</ul>
+            <ul>Become an Affiliate</ul>
+            <ul>Advertise Your Products</ul>
+            <ul>Self-Publish with Us</ul>
+            <ul>Host an Amazon Hub</ul>
+            <ul>See More Make Money with Us</ul>
+          </ol>
         </div>
 
         <div className="footer__menuColumn">
           <h3>Amazon Payment Method</h3>
-          <p>Amazon Business Card</p>
-          <p>Shop with Points</p>
-          <p>Reload Your Balance</p>
-          <p>Amazon Currency Converter</p>
+          <ol>
+            <ul>Amazon Platinum Mastercard</ul>
+            <ul>Amazon Classic Mastercard</ul>
+            <ul>Amazon Money Store</ul>
+            <ul>Gift Cards</ul>
+            <ul>Amazon Currency Converter</ul>
+            <ul>Payment Methods Help</ul>
+            <ul>Shop with Points</ul>
+          </ol>
         </div>
 
         <div className="footer__menuColumn">
           <h3>Let Us Help You</h3>
-          <p>Amazon and COVID-19</p>
-
-          <p>Your Account</p>
-          <p>Your Orders</p>
-          <p>Shipping Rates & Policies</p>
-          <p>Returns & Replacements</p>
-          <p>Manage Your Content and Devices</p>
-          <p>Amazon Assistant</p>
-          <p>Help</p>
+          <ol>
+            <ul>COVID-19 and Amazon</ul>
+            <ul>Your Account</ul>
+            <ul>Your Orders</ul>
+            <ul>Delivery Rates & Policies</ul>
+            <ul>Returns & Replacements</ul>
+            <ul>Manage Your Content and Devices</ul>
+            <ul>Help</ul>
+          </ol>
         </div>
-
+      </div>
+      <div class="footer__logoContainer">
         <img
-          className="footer__logo"
+          class="footer__logo"
           src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
           alt="Amazon Logo"
         />

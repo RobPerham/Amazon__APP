@@ -4,8 +4,10 @@ import CurrencyFormat from "react-currency-format";
 import Button from "@mui/material/Button";
 import { useStateValue } from "./StateProvider";
 import { getBasketTotal } from "./reducer";
+import { useNavigate } from "react-router-dom";
 
 function Subtotal() {
+  const navigate = useNavigate();
   const [{ basket }, dispatch] = useStateValue();
 
   return (
@@ -27,7 +29,9 @@ function Subtotal() {
         thousandSeparator={true}
         prefix={"£"}
       />
-      <Button>Proceed to Checkout</Button>
+      <Button onClick={(e) => navigate.push("/payment")}>
+        Proceed to Checkout
+      </Button>
     </div>
   );
 }
