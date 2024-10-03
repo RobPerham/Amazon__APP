@@ -2,30 +2,47 @@ import React from "react";
 import "./Product.css";
 import Button from "@mui/material/Button";
 import StarBorderRoundedIcon from "@mui/icons-material/StarBorderRounded";
+import { useStateValue } from "./StateProvider";
 
-function Product() {
+function Product({ id, title, image, price, rating }) {
+  const [{ basket }, dispatch] = useStateValue();
+
+  console.log("This is the basket >>>", basket);
+
+  const addToBasket = () => {
+    // dispatch the item into the data layer
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        rating: rating,
+      },
+    });
+  };
+
   return (
-    <div className="project">
+    <div className="product">
       <div className="product__info">
-        <p>The Lean Startup:</p>
+        <p>{title}</p>
         <p className="product__price">
           <small>£</small>
-          <strong>19.90</strong>
+          <strong>{price}</strong>
         </p>
         <div className="product__rating">
-          <StarBorderRoundedIcon />
-          <StarBorderRoundedIcon />
-          <StarBorderRoundedIcon />
-          <StarBorderRoundedIcon />
+          {Array(rating)
+            .fill()
+            .map((_) => (
+              <StarBorderRoundedIcon />
+            ))}
         </div>
       </div>
 
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg"
-        alt=""
-      />
+      <img src={image} alt="" />
 
-      <Button>Add to Basket</Button>
+      <Button onClick={addToBasket}>Add to Basket</Button>
     </div>
   );
 }
