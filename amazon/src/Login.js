@@ -8,8 +8,10 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -17,9 +19,8 @@ function Login() {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((auth) => {
-        {
-          /*navigate("/");*/
-        }
+        navigate("/");
+
         console.log(auth);
       })
       .catch((error) => alert(error.message));
@@ -31,9 +32,7 @@ function Login() {
     createUserWithEmailAndPassword(auth, email, password)
       .then((auth) => {
         if (auth) {
-          {
-            /*navigate("/");*/
-          }
+          navigate("/");
           console.log(auth);
         }
       })
