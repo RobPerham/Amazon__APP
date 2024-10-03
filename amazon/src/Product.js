@@ -25,7 +25,7 @@ function Product() {
         alt=""
       />
 
-      <Button className="product__Button">Add to Basket</Button>
+      <Button>Add to Basket</Button>
     </div>
   );
 }
