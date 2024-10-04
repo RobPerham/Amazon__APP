@@ -7,6 +7,7 @@ import { auth } from "./firebase";
 // icon component
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 
 function Header() {
   // destructuring the state

@@ -2,9 +2,21 @@
   display: flex;
   padding: 20px;
   background-color: white;
-  border-radius: 5px;
+  border-radius: px;
   margin-top: 20px;
   margin-bottom: 20px;
+  height: 90vh auto;
+}
+
+.checkout__left {
+  flex: 0.8;
+  padding: 30px;
+}
+
+.checkout__right {
+  flex: 0.2;
+  background-color: white;
+  padding: 30px;
 }
 
 .checkout__title {
@@ -13,7 +25,19 @@
   border-bottom: 1px solid lightgray;
 }
 
+.checkout__items {
+  margin-bottom: 20px;
+}
+
 .checkout__ad {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
+
+/*
+<img
+className="checkout__ad"
+src="https://images-eu.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg"
+alt=""
+/>
+*/

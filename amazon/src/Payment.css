@@ -1,5 +1,8 @@
 .payment {
   background-color: white;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
 }
 
 .payment__container > h1 {
@@ -41,8 +44,4 @@
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
   cursor: pointer;
-}
-
-.payment__priceContainer > Button :hover {
-  background: #f7f7f7;
 }
