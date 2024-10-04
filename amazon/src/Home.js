@@ -11,7 +11,7 @@ function Home() {
           src="https://m.media-amazon.com/images/I/711910caIXL._SX3000_.jpg"
           alt="Banner"
         />
-        ;
+
         <div className="home__row">
           <Product
             id="12321341"
